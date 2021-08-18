@@ -108,7 +108,7 @@ function updateBalls() {
   function ballFactory()
   {
     var nob = prompt("Please enter a number between 0 and 100 to create this amount of balls.", "Enter a number!");
-   if (nob <=100 || nob >=0 ){
+   if (nob <= 100 && nob >=0 ){
     for (let i=0; i < nob; i++)
     {
         createBall();
@@ -116,6 +116,7 @@ function updateBalls() {
     }
     else
     {
+        
         divOutput.innerHTML = ('Please select a number from 0-100')
     }
     setComment('This function creates the amount of balls entered in the output box and will start updating locations.');
@@ -205,7 +206,7 @@ function arrayUnshift() {
     let someText = "This is the original array: <b>" + orig + "</b></BR></BR> This is the modified array: ";
     
     let modif = '';
-    arr.ushift('the added option');
+    arr.unshift('the added option');
     arr.forEach(item => {modif += item + ' '; } );
     divOutput.innerHTML = someText + modif;
     setComment('This function is using the unshift function to add a new first item to the array');
