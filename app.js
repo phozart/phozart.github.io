@@ -93,7 +93,7 @@ function getRandom(step, type) {
   return Math.floor(Math.random() * (max - min) + min);
   }
 function updateBalls() {
-    divOutput.innerHTML = "";
+    
     let step = 2;
     
     for (let i = 0; i < balls.length; i++) {
