@@ -1,0 +1,44 @@
+#output{
+        position: absolute;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+    width: 600px;
+    height: 400px;
+    top: 150px;
+    border-color: black;
+    border-style:solid ;
+    border-width: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow:auto;
+    
+}
+
+#head{
+    position: absolute;
+}
+
+#outputFrame{
+    
+    
+}
+
+#comment{
+    position: absolute;
+    width: 600px;
+    height: 30px;
+    top: 120px;
+    border-color: greenyellow;
+    border-style:solid ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-width: 1px;
+    font-size: 10px;
+    background-color: lightgreen;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    background-color: red;
+    position: absolute;
+  }
