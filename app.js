@@ -61,7 +61,7 @@ function loadHeaderButtons()
 function createBall()
 {
     let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
-        
+    divOutput.innerHTML = "";
         ball = document.createElement("div");
         ball.style.backgroundColor = randomColor;
         ball.className = "ball";
@@ -93,7 +93,7 @@ function getRandom(step, type) {
   return Math.floor(Math.random() * (max - min) + min);
   }
 function updateBalls() {
-    
+    divOutput.innerHTML = "";
     let step = 2;
     
     for (let i = 0; i < balls.length; i++) {
@@ -107,6 +107,7 @@ function updateBalls() {
 
   function ballFactory()
   {
+      divOutput.innerHTML = "";
     var nob = prompt("Please enter a number between 0 and 100 to create this amount of balls.", "Enter a number!");
    if (nob <= 100 && nob >=0 ){
     for (let i=0; i < nob; i++)
