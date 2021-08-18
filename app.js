@@ -33,6 +33,7 @@ var arrCom = {};
 var tim;
 setDefault();
 loadHeaderButtons();
+var comm = false;
 
 
 
@@ -102,7 +103,7 @@ function updateBalls() {
     }
     
    balltimer =  setTimeout(updateBalls, 100); 
-   setComment('This function updates the ball(s) location in the output box randomly.');
+ //  setComment('This function updates the ball(s) location in the output box randomly.');
   }
 
   function ballFactory()
