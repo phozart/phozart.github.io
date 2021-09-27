@@ -93,36 +93,35 @@ function loadHome() {
     
     left.innerHTML = "";
     left.innerHTML += "<h1 class='text-center m-5'>Peter Hardy</h1>";
-    left.innerHTML += "<div id = 'removingText'><strong class='text-center '>A developer's portfolio</strong></div>";
+    left.innerHTML += "<p class='m-5 '>  A developer's portfolio</p>";
 
     left.innerHTML += "<img style= 'bottom: 0;  display:block;' width='100% height=100%' src=" + imgLoc + "></img>";
 
     right.innerHTML = "";
     right.innerHTML += "<div><strong>youtube video comes here</strong></div";
-    var element = document.getElementById('removingText');
-    setInterval(removeThatText(element),1000);
-
+ 
 }
-var counter = 0;
-function removeThatText(element){
-    var cur_left=parseFloat(element.style.left);
-    
-    element.style.top = (cur_left+10)+"px";
-    console.log(element.style.top)
-    counter++;
-  // if (counter===50) clearTimeout();
-    
 
 
-}
 
 function loadAbout() {
     
     right.innerHTML = "";
-    right.innerHTML += "<div><strong>Hi! </strong><p>My name is Peter Hardy, I live in Belgiume in a small village not far from brussels</div";
+    right.innerHTML += "<div><strong>Hi! </strong><p>My name is Peter Hardy, "
+                    + calculateAge() + " years old. I live in Belgiume in a small village not far from brussels</div";
 
 
 }
+function calculateAge(birthday) { // birthday is a date
+    var dob = new Date("06/16/1986");  
+    var month_diff = Date.now() - dob.getTime();  
+    var age_dt = new Date(month_diff);    
+    var year = age_dt.getUTCFullYear();  
+    var age = Math.abs(year - 1970);  
+    return age;
+
+}
+
 function loadProjects() {
     
     right.innerHTML = "";
