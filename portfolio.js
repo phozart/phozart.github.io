@@ -150,7 +150,7 @@ function loadContact() {
     right.innerHTML += '<section class="mb-4">'
         + '<h2 class="h2-responsive font-weight-bold text-left my-4">Contact me</h2>'
         + '<div class="row"> <div class="col-md-9 mb-md-0 mb-5">'
-        + '<strong>Please send an e-mail to peter.hardy@ouiqui.com for any enquiries. </strong>'
+        + '<strong>E-mail: <a href="mailto: peter.hardy@ouiqui.com"> peter.hardy@ouiqui.com</a> for any enquiries. </strong>'
         +  '</div></div></section>' ;
 
 
