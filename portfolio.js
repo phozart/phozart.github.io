@@ -165,7 +165,7 @@ function loadContact() {
         +  '<label for="message">Your message</label> </div></div></div></form>'
         +  '<div class="text-center text-md-left">'
         +  '<a class="btn btn-primary" onclick="validateForm();">Send</a>'
-        +  '</div></div></section>';
+        +  '</div></div></section>' ;
 
 
 }
