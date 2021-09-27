@@ -1,16 +1,36 @@
-<html>
-  <style>
-#myIMG{
-  width: 200px;
-  height: auto;
-} 
-  .a{
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 10px;
-    }
-</style>
-<h1>Peter's Portfolio</h1>
-  <a href = "./myhomepage.html">First javascript App </a>
-<br>
-  <img src = "./IMG_6999.JPG" id='myIMG'/>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet" >
+    <title>Peter Hardy - Portfolio Website</title>
+  </head>
+  <body>
+    
+    <div id="header" style="background-color: rgb(47, 59, 83);"></div>
+
+    <div id="main" class = "container mt-5 mb-5 justify-content-center" >
+        <div class="row justify-content-center">
+            <div id = 'left-column' class="col-3 rm-3 footer-image rounded " style=" background-color: rgb(216, 215, 213);">
+            </div>
+            <div id = 'right-column' class="col-8 lm-5 rounded border  " style="background-color: rgb(216, 215, 213)"> 
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="portfolio.js"></script>
+
+
+  </body>
 </html>
