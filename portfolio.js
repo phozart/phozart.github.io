@@ -150,20 +150,7 @@ function loadContact() {
     right.innerHTML += '<section class="mb-4">'
         + '<h2 class="h2-responsive font-weight-bold text-left my-4">Contact me</h2>'
         + '<div class="row"> <div class="col-md-9 mb-md-0 mb-5">'
-        +  '<form id="contact-form" name="contact-form" action="mail.php" method="POST">'
-        +  '<div class="row"><div class="col-md-6"><div class="md-form mb-0">'
-        +  '<input type="text" id="name" name="name" class="form-control">'
-        +  '<label for="name" class="">Your name</label></div>'
-        +  '</div><div class="col-md-6"><div class="md-form mb-0">'
-        +   '<input type="text" id="email" name="email" class="form-control">'
-        +   '<label for="email" class="">Your email</label></div></div></div>'
-        +   '<div class="row"><div class="col-md-12"><div class="md-form mb-0">'
-        +  '<input type="text" id="subject" name="subject" class="form-control">'
-        +   '<label for="subject" class="">Subject</label></div></div></div>'
-        +  '<div class="row"><div class="col-md-12"><div class="md-form">'
-        +  '<textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>'
-        +  '<label for="message">Your message</label> </div></div></div>'
-        +'<button type = "submit" class="btn btn-primary" >Send</a></form>'
+        + '<strong>Please send an e-mail to peter.hardy@ouiqui.com for any enquiries. </strong>'
         +  '</div></div></section>' ;
 
 
