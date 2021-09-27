@@ -162,9 +162,9 @@ function loadContact() {
         +   '<label for="subject" class="">Subject</label></div></div></div>'
         +  '<div class="row"><div class="col-md-12"><div class="md-form">'
         +  '<textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>'
-        +  '<label for="message">Your message</label> </div></div></div></form>'
+        +  '<label for="message">Your message</label> </div></div></div>'
+        +'<a class="btn btn-primary" onclick="validateForm();">Send</a></form>'
         +  '<div class="text-center text-md-left">'
-        +  '<a class="btn btn-primary" onclick="validateForm();">Send</a>'
         +  '</div></div></section>' ;
 
 
