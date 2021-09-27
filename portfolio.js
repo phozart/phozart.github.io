@@ -8,7 +8,7 @@ const cards = [
     ["card Title","Card content","Cart link", "Card button"]
     ,["Moving eyes","Card content2","Cart lin2k", "Card button2"]
     ,["card Title2","Card content2","Cart lin2k", "Card button2"]
-    ,["Phozart DJ and producer","Wordpress website by Phozart","http://www.phozart.net", "Go to website"]
+    ,["Phozart DJ","Wordpress website by Peter hardy","http://www.phozart.net", "Go to website"]
     ,["JS skills review","A page full of JS functions","myhomepage.html", "Go to page"]
 ];
 
