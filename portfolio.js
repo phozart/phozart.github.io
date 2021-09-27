@@ -9,7 +9,7 @@ const cards = [
     ,["Moving eyes","Card content2","Cart lin2k", "Card button2"]
     ,["card Title2","Card content2","Cart lin2k", "Card button2"]
     ,["Phozart DJ and producer","Wordpress website by Phozart","http://www.phozart.net", "Go to website"]
-
+    ,["JS skills review","A page full of JS functions","myhomepage.html", "Go to page"]
 ];
 
 loadMainScreen();
