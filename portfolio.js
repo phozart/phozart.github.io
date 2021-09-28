@@ -173,9 +173,17 @@ function flipImage() {
 function loadAbout() {
   right.innerHTML = "";
   right.innerHTML +=
-    "<div><strong>Hi! </strong><p>My name is Peter Hardy, " +
-    calculateAge() +
-    " years old. I live in Belgiume in a small village not far from brussels</div";
+    "<div><strong>Hi! Welcome to my portfolio page.</strong> <p>I’m Peter Hardy, "+ calculateAge() + " years old and I’m from Belgium, married and have 2 kids. "
+    + "I built this portfolio as an assignment for the MIT x-pro Full stack developer course.</p>"
+    
+    +"<p>Throughout my career I’ve been working for several IT companies in logistics, support analysis, incident management as well as team management in Belgium and abroad.</p>"
+    +"<p>Since 2014 I’m a small business owner, providing consultancy services in IT management and business analysis. Beside these core business activities I’m a photographer, Dj and music producer. In my little free time I’m an amateur astronomer. "
+    +"And on top of these activities I’m continuously studying to gain new knowledge.</p>"
+    +"<p>Some of the key skills I've developed and used over the past years are SQL query writing, object oriented thinking, service management and agile project management to name just a few.</p>"
+    
+    +"<p>This is the key information about me, if you want to learn more, you can check my socials listed on this page, send me an e-mail or sent me a direct message on whatsapp.</p><p>Thank you for visiting this page!</p><p>P.S. If you watched the video, to find the answer to the final question, click my image.</p></div> " ;
+    
+  
   let element = document.getElementById("rightText");
   element.innerHTML =
     "<p class='m-5 '>Find my short biography on this page.</p>";
