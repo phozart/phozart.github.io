@@ -12,6 +12,15 @@ const cards = [
     ,["card Title2","Card content2","Cart lin2k", "Card button2"]
     ,["JS skills review","A page full of JS functions","myhomepage.html", "Go to page"]
 ];
+const socialMedia = [
+    ["LinkedIn", "http://linkedin.com"]
+    , ["WhatsApp", "https://api.whatsapp.com/send?phone=32493630115"]
+    , ["E-mail", "http://instagram.com/phozart.music"]
+    , ["Github", "http://instagram.com/phozart.music"]
+    , ["Facebook", "https://www.facebook.com/P3terHardy/"]
+    , ["Instagram", "http://instagram.com/phozart.music"]
+    
+];
 
 
 loadMainScreen();
@@ -36,49 +45,12 @@ function setNavBar()
             let menuItem = nav[i];
                 menuHTML += "<li class='nav-item'><button onclick = 'navigate(\u0022" + menuItem +"\u0022)' id=" + menuItem + 
                                     " class='nav-link text-uppercase text-light'>" + menuItem + "</button></li>";
-                                    console.log(menuItem);
         }
-       
+        menuHTML += "</ul></nav>"
+
         
-      /*  <!-- Twitter -->
-        <i class="fab fa-twitter"></i>
+  
         
-        <!-- Google -->
-        <i class="fab fa-google"></i>
-        
-        <!-- Instagram -->
-        <i class="fab fa-instagram"></i>
-        
-        <!-- Linkedin -->
-        <i class="fab fa-linkedin-in"></i>
-        
-        <!-- Pinterest -->
-        <i class="fab fa-pinterest"></i>
-        
-        <!-- Vkontakte -->
-        <i class="fab fa-vk"></i>
-        
-        <!-- Stack overflow -->
-        <i class="fab fa-stack-overflow"></i>
-        
-        <!-- Youtube -->
-        <i class="fab fa-youtube"></i>
-        
-        <!-- Slack -->
-        <i class="fab fa-slack-hash"></i>
-        
-        <!-- Github -->
-        <i class="fab fa-github"></i>
-        
-        <!-- Dribbble -->
-        <i class="fab fa-dribbble"></i>
-        
-        <!-- Reddit -->
-        <i class="fab fa-reddit-alien"></i>
-        
-        <!-- Whatsapp -->
-        <i class="fab fa-whatsapp"></i>*/
-        menuHTML += "</ul> <i class='fab fa-facebook-f'></i></nav>";
         console.log(nav[0]);
         navBar.innerHTML += menuHTML;
        setSelectedMenuItem(nav[0]);
@@ -139,13 +111,48 @@ function loadHome() {
     
     left.innerHTML = "";
    // left.innerHTML += "<h1 class='text-center m-5'>Peter Hardy</h1>";
+
+
     left.innerHTML += "<div id='rightText' class='bg-white'><p class='m-5 '>The homepage displays an introduction video.</p></div>";
 
     left.innerHTML += "<img id='portImage' onclick='flipImage()'  style= 'bottom: 0;  display:block;' width='100% height=100%' src=" + imgLoc + "></img>";
 
     right.innerHTML = "";
     right.innerHTML += "<div><strong>youtube video comes here</strong></div";
- 
+    if (socialMedia.length > 0)
+    {
+        var socials = "<div class = 'container border rounded bg-light'><div class = 'row justify-content-center'>"
+        for(let i = 0; i < socialMedia.length; i++)
+        {
+            
+            switch (socialMedia[i][0])
+            {
+                case "Facebook":
+                    socials += "<div class='col-sm-3'><a href='" + socialMedia[i][1] + "' class='fa fa-facebook text-decoration-none' target='_blank']> </a></div>";
+                break;
+                case "LinkedIn":
+                    socials += "<div class=' col-sm-3'><a href='" + socialMedia[i][1] + "' class='fa fa-linkedin  text-decoration-none' target='_blank'> </a></div>";
+                break;
+                case "Instagram":
+                    socials += "<div class=' col-sm-3'><a href='" + socialMedia[i][1] + "' class='fa fa-instagram  text-decoration-none' target='_blank'> </a></div>";
+                break;
+                case "WhatsApp":
+                    socials += "<div class=' col-sm-3'><a href='" + socialMedia[i][1] + "' class='fa fa-whatsapp  text-decoration-none' target='_blank'> </a></div>";
+                break;
+                case "E-mail":
+                    socials += "<div class=' col-sm-3'><a href='" + socialMedia[i][1] + "' class='fa fa-envelope  text-decoration-none' target='_blank'> </a></div>";
+                break;
+                case "Github":
+                    socials += "<div class=' col-sm-3'><a href='" + socialMedia[i][1] + "' class='fa fa-github  text-decoration-none' target='_blank'> </a></div>";
+                break;
+                default:
+                
+            }
+             
+        }
+        socials += "</div></div>"
+    }
+    left.innerHTML += socials;
 }
 
 function flipImage() {
