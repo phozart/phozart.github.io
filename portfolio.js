@@ -13,10 +13,10 @@ const cards = [
     ,["JS skills review","A page full of JS functions","myhomepage.html", "Go to page"]
 ];
 const socialMedia = [
-    ["LinkedIn", "http://linkedin.com"]
+    ["LinkedIn", "https://www.linkedin.com/in/peter-hardy-2512175/"]
     , ["WhatsApp", "https://api.whatsapp.com/send?phone=32493630115"]
-    , ["E-mail", "http://instagram.com/phozart.music"]
-    , ["Github", "http://instagram.com/phozart.music"]
+    , ["E-mail", "mailto:peter.hardy@hazerco.be"]
+    , ["Github", "https://github.com/phozart"]
     , ["Facebook", "https://www.facebook.com/P3terHardy/"]
     , ["Instagram", "http://instagram.com/phozart.music"]
     
