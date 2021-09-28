@@ -7,7 +7,7 @@ const imgLoc = "images/image.jpg";
 const right = document.getElementById('right-column');
 const left = document.getElementById('left-column');
 const cards = [
-    ["PacMen","A PacMen exercise!","Cart link", "Card Show now!"]
+    ["PacMen","A PacMen exercise!","loadPacMen()", " Show now!"]
     ,["Moving eyes","These eyes are following you!","movingEyes()", "Show now!"]
     ,["Bus stops","Showing bus stops on map","busProject()", "Show now!"]
     ,["JS skills review","A page full of JS functions","showProject()", "Go to page"]
@@ -306,6 +306,17 @@ function move() {
         ballsE[i].transfoorm = "translate(-" + x + ",-" + y + ")";
       }
     };
+  }
+
+  function loadPacMen(){
+    right.innerHTML = "";
+    right.innerHTML = "<div class='justify-content-center'><h2>This project lets Pacman move!</h2><div>";
+
+    right.innerHTML += '<strong>OUCH.. looks like there is no data yet</strong>';
+        
+          let element = document.getElementById('rightText');
+          element.innerHTML = "<p class='m-5 '>Running Pacmen, catch him if you can <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn btn-primary position-sticky' target='_blank'>Go to GITHUB </a></p>";
+         
   }
   
 
