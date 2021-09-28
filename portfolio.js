@@ -9,8 +9,8 @@ const left = document.getElementById('left-column');
 const cards = [
     ["card Title","Card content","Cart link", "Card button"]
     ,["Moving eyes","Card content2","Cart lin2k", "Card button2"]
-    ,["card Title2","Card content2","Cart lin2k", "Card button2"]
-    ,["JS skills review","A page full of JS functions","myhomepage.html", "Go to page"]
+    ,["Bus stops","Showing bus stops on map","busProject()", "Show now!"]
+    ,["JS skills review","A page full of JS functions","showProject()", "Go to page"]
 ];
 const socialMedia = [
     ["LinkedIn", "https://www.linkedin.com/in/peter-hardy-2512175/"]
@@ -48,10 +48,6 @@ function setNavBar()
         }
         menuHTML += "</ul></nav>"
 
-        
-  
-        
-        console.log(nav[0]);
         navBar.innerHTML += menuHTML;
        setSelectedMenuItem(nav[0]);
         return;
@@ -197,7 +193,7 @@ function loadProjects() {
         right.innerHTML += "<div class='card position-relative' style='width: 16rem; display: inline-block;'> <div class='card-body'>"
             + "<h5 class='card-title'> " + cards[i][0] + " </h5>"
             +    "<p class='card-text'>"  + cards[i][1] + "</p>"
-            + "<a href="+ cards[i][2] + " target = '_blank' class='btn btn-primary stretched-link'>" + cards[i][3] + "</a></div> "
+            + "<a onclick="+ cards[i][2] + " class='btn btn-primary stretched-link'>" + cards[i][3] + "</a></div> "
     }
     right.innerHTML += "</div>"
     let element = document.getElementById('rightText');
@@ -222,4 +218,69 @@ function loadContact() {
 
 
 }
+var marker = new mapboxgl.Marker();
+const busStops = [
+    [-71.093729, 42.359244],
+    [-71.094915, 42.360175],
+    [-71.0958, 42.360698],
+    [-71.099558, 42.362953],
+    [-71.103476, 42.365248],
+    [-71.106067, 42.366806],
+    [-71.108717, 42.368355],
+    [-71.110799, 42.369192],
+    [-71.113095, 42.370218],
+    [-71.115476, 42.372085],
+    [-71.117585, 42.373016],
+    [-71.118625, 42.374863]
+  ];
+  var counterB = 0;
+function busProject() {
+    right.innerHTML = "";
+    right.innerHTML = "<div class='justify-content-center'><h2>Bus stop exercise</h2><div><div class='row'>";
+    right.innerHTML += "<div class='col-sm-8 positio-relative'>This project is showing the bus stops between MIT and Harvard. "
+    right.innerHTML += "<a href='https://github.com/phozart/BusStops' class='btn btn-primary position-relative' target='_blank'>Go to GITHUB </a></div>"    ;
+    right.innerHTML += "<div id='map' class = 'col-sm-4 justify-content-center position-relative'> </div></div>";
+    let element = document.getElementById('rightText');
+    element.innerHTML = "<p class='m-5 '>You are looking at the bus project now, <a onclick='loadProjects()' class='btn btn-primary'>click here</a> to go back to the projects page</p>";
+    mapboxgl.accessToken = 'pk.eyJ1IjoicGhvemFydCIsImEiOiJja3RsaGY1dGwxdm1yMnpxbnlsMXdzbHdvIn0.hZDbJK32w1AJsD9scMci5A';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-71.104081, 42.365554],
+      zoom: 13,
+    });
+move();
+      
+        marker.setLngLat([-71.092761, 42.357575])
+        marker.addTo(map);
+}
+// This array contains the coordinates for all bus stops between MIT and Harvard
 
+
+var b = 0
+      
+function move() {
+    setTimeout(() => {
+       
+        if (counterB >= busStops.length-1) b = 1;
+        if (counterB === 0) b=0;
+        marker.setLngLat(busStops[counterB]);
+        if(b===0) counterB++;
+        if(b===1) counterB--;
+        
+        move();
+       
+      }, 500);
+  }
+  
+  function showProject() {
+    right.innerHTML = "";
+    right.innerHTML = "<div class='justify-content-center'><h2>A page showing JS functions and exercises</h2><div><div class='row'>";
+    right.innerHTML += "<div id='head' class='col col-sm-8 position-relative'> </div><div id='output' class='position-sticky mt-1'></div><div id = 'comment' class='position-sticky'> </div></div>";
+    let element = document.getElementById('rightText');
+    element.innerHTML = "<p class='m-5 '>You are looking at a project that I made to show JS functions. <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page</p>";
+    starter();
+  }
+  
+
+  

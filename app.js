@@ -11,35 +11,41 @@ This APP shows capabilities to:
 
 
 */
-
-// Define defaults
-const divOutput = document.getElementById('output');
-const divHeader = document.getElementById('head');
-const comment = document.getElementById('comment');
-const outputFrame = document.getElementById('outputFrame');
-let ouLeft = window.getComputedStyle(divOutput,null).getPropertyValue('left');
-let ouTop = window.getComputedStyle(divOutput,null).getPropertyValue('top');
-let ouWidth = window.getComputedStyle(divOutput,null).getPropertyValue('width');
-let ouHeight = window.getComputedStyle(divOutput,null).getPropertyValue('height');
-const maxX = 575; //Number(ouLeft.replace(/[a-z]/g, '')) + Number(ouWidth.replace(/[a-z]/g, ''));
-const maxY = 375; //Number(ouTop.replace(/[a-z]/g, '')) + Number(ouHeight.replace(/[a-z]/g, ''));
-const minX = 0 ;//Number(ouLeft.replace(/[a-z]/g, ''));
-const minY = 0 ;//Number(ouHeight.replace(/[a-z]/g, ''));
+var divOutput = "";
+var divHeader = "";
 var balls = [];
 var balltimer;
 var b = false;
 var arrSim = {};
 var arrCom = {};
 var tim;
+const maxX = 575; //Number(ouLeft.replace(/[a-z]/g, '')) + Number(ouWidth.replace(/[a-z]/g, ''));
+const maxY = 350; //Number(ouTop.replace(/[a-z]/g, '')) + Number(ouHeight.replace(/[a-z]/g, ''));
+const minX = 0 ;//Number(ouLeft.replace(/[a-z]/g, ''));
+const minY = 0 ;//Number(ouHeight.replace(/[a-z]/g, ''));
+var comment;
+var outputFrame;
+
+// Define defaults
+function starter(){
+ divOutput = document.getElementById('output');
+ divHeader = document.getElementById('head');
+ comment = document.getElementById('comment');
+ outputFrame = document.getElementById('outputFrame');
+//let ouLeft = window.getComputedStyle(divOutput,null).getPropertyValue('left');
+//let ouTop = window.getComputedStyle(divOutput,null).getPropertyValue('top');
+//let ouWidth = window.getComputedStyle(divOutput,null).getPropertyValue('width');
+//let ouHeight = window.getComputedStyle(divOutput,null).getPropertyValue('height');
+
+
 setDefault();
 loadHeaderButtons();
 var comm = false;
-
+}
 
 
 function loadHeaderButtons()
 {
-    divHeader.innerHTML += '<button onclick="enterStringOnWebpage()">Single String</button> ';
     divHeader.innerHTML += '<button onclick="enterSentenceOnWebpage()">Sentence</button> ';
     divHeader.innerHTML += '<button onclick="putStringValuesInArray()">Split Sentence</button> ';
     divHeader.innerHTML += '<button onclick="putParagraphValuesInArrayAndSort()">Get word Count from paragraph</button> ';
