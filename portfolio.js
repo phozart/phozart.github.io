@@ -109,7 +109,7 @@ function loadHome() {
    // left.innerHTML += "<h1 class='text-center m-5'>Peter Hardy</h1>";
 
 
-    left.innerHTML += "<div id='rightText' class='bg-white'><p class='m-5 '>The homepage displays an introduction video.</p></div>";
+    left.innerHTML += "<div id='rightText' class='bg-white'><p class='m-5 '>This box guides you through the portfolio site. This page displays an introduction video.</p></div>";
 
     left.innerHTML += "<img id='portImage' onclick='flipImage()'  style= 'bottom: 0;  display:block;' width='100% height=100%' src=" + imgLoc + "></img>";
 
