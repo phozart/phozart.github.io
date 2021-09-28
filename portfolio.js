@@ -1,16 +1,18 @@
 const footer = "© 2021 Peter Hardy";
+var counter = "1"; 
+var sum = 0;
 const nav = ["Home", "About", "Projects", "Contact"];
 var selectedMenuItem = "";
 const imgLoc = "images/image.jpg";
-var right = document.getElementById('right-column');
-var left = document.getElementById('left-column');
+const right = document.getElementById('right-column');
+const left = document.getElementById('left-column');
 const cards = [
     ["card Title","Card content","Cart link", "Card button"]
     ,["Moving eyes","Card content2","Cart lin2k", "Card button2"]
     ,["card Title2","Card content2","Cart lin2k", "Card button2"]
-    ,["Phozart DJ","Wordpress site by Peter hardy","http://www.phozart.net", "Go to website"]
     ,["JS skills review","A page full of JS functions","myhomepage.html", "Go to page"]
 ];
+
 
 loadMainScreen();
 
@@ -61,6 +63,8 @@ function navigate(tab) {
     }
 }
 
+
+
 function setSelectedMenuItem(menuItem)
 {
    if (selectedMenuItem != "")
@@ -95,11 +99,20 @@ function loadHome() {
     left.innerHTML += "<h1 class='text-center m-5'>Peter Hardy</h1>";
     left.innerHTML += "<p class='m-5 '>  A developer's portfolio</p>";
 
-    left.innerHTML += "<img style= 'bottom: 0;  display:block;' width='100% height=100%' src=" + imgLoc + "></img>";
+    left.innerHTML += "<img id='portImage' onclick='flipImage()'  style= 'bottom: 0;  display:block;' width='100% height=100%' src=" + imgLoc + "></img>";
 
     right.innerHTML = "";
     right.innerHTML += "<div><strong>youtube video comes here</strong></div";
  
+}
+
+function flipImage() {
+    let element = document.getElementById('portImage');
+    sum += 90;
+    if (sum === 360) sum = 0;
+    element.style.transform = "rotate(" + sum + "deg)";
+    
+    
 }
 
 
