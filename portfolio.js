@@ -27,7 +27,7 @@ function loadMainScreen()
 function setNavBar()
     {
         let navBar = document.getElementById("header");
-        navBar.className = "container rounded fixed-top text-uppercase bg-dark";
+        navBar.className = "container rounded fixed-top text-uppercase";
         let menuHTML = "<nav><ul class='nav nav-pills'>";
         for (i = 0; i < nav.length; i++)
         {
@@ -37,6 +37,7 @@ function setNavBar()
                                     console.log(menuItem);
         }
         menuHTML += "</ul></nav>";
+        menuHTML += "<div class= 'position-relative w-100 text-sm-center text-center bg-dark'><h1 class='text-right text-light'>Peter Hardy</h1></div";
         console.log(nav[0]);
         navBar.innerHTML += menuHTML;
        setSelectedMenuItem(nav[0]);
@@ -96,7 +97,7 @@ function setFooter()
 function loadHome() {
     
     left.innerHTML = "";
-    left.innerHTML += "<h1 class='text-center m-5'>Peter Hardy</h1>";
+   // left.innerHTML += "<h1 class='text-center m-5'>Peter Hardy</h1>";
     left.innerHTML += "<p class='m-5 '>  A developer's portfolio</p>";
 
     left.innerHTML += "<img id='portImage' onclick='flipImage()'  style= 'bottom: 0;  display:block;' width='100% height=100%' src=" + imgLoc + "></img>";
