@@ -109,9 +109,9 @@ function loadHome() {
    // left.innerHTML += "<h1 class='text-center m-5'>Peter Hardy</h1>";
 
 
-    left.innerHTML += "<div id='rightText' class='bg-white' style='border-radius:50px;'><p class='m-5 '>This box guides you through the portfolio site. This page displays an introduction video.</p></div>";
+    left.innerHTML += "<div id='rightText' class='bg-white' style='border-radius:50px;'><p class='m-4 '>This box guides you through the portfolio site. This page displays an introduction video.</p></div>";
 
-    left.innerHTML += "<img id='portImage' onclick='flipImage()'  style= 'bottom: 0;  display:block;' width='100% height=100%' src=" + imgLoc + "></img>";
+    left.innerHTML += "<img id='portImage' onclick='flipImage()' class='border  border-light' style= 'bottom: 0;  display:block;' width='100% height=100%' src=" + imgLoc + "></img>";
 
     right.innerHTML = "";
     right.innerHTML += "<div><strong>youtube video comes here</strong></div";
@@ -153,7 +153,7 @@ function loadHome() {
 
 function flipImage() {
     let element = document.getElementById('portImage');
-    sum += 90;
+    sum += 180;
     if (sum === 360) sum = 0;
     element.style.transform = "rotate(" + sum + "deg)";
     
@@ -242,6 +242,7 @@ function busProject() {
     right.innerHTML += "<div id='map' class = 'col-sm-4 justify-content-center position-relative'> </div></div>";
     let element = document.getElementById('rightText');
     element.innerHTML = "<p class='m-5 '>You are looking at the bus project now, <a onclick='loadProjects()' class='btn btn-info'>click here</a> to go back to the projects page or <a href='https://github.com/phozart/BusStops' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
+    
     mapboxgl.accessToken = 'pk.eyJ1IjoicGhvemFydCIsImEiOiJja3RsaGY1dGwxdm1yMnpxbnlsMXdzbHdvIn0.hZDbJK32w1AJsD9scMci5A';
     var map = new mapboxgl.Map({
       container: 'map',
