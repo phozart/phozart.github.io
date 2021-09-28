@@ -7,8 +7,8 @@ const imgLoc = "images/image.jpg";
 const right = document.getElementById('right-column');
 const left = document.getElementById('left-column');
 const cards = [
-    ["card Title","Card content","Cart link", "Card button"]
-    ,["Moving eyes","Card content2","Cart lin2k", "Card button2"]
+    ["PacMen","A PacMen exercise!","Cart link", "Card Show now!"]
+    ,["Moving eyes","These eyes are following you!","movingEyes()", "Show now!"]
     ,["Bus stops","Showing bus stops on map","busProject()", "Show now!"]
     ,["JS skills review","A page full of JS functions","showProject()", "Go to page"]
 ];
@@ -280,6 +280,32 @@ function move() {
     let element = document.getElementById('rightText');
     element.innerHTML = "<p class='m-5 '>You are looking at a project that I made to show JS functions. <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page</p>";
     starter();
+  }
+
+  function movingEyes(){
+      right.innerHTML = "";
+      right.innerHTML = "<div class='justify-content-center'><h2>A page showing moving eyes! Move your cursor</h2><div>";
+
+      right.innerHTML += '<div class="eyes"><div class="eye"><div class="ballE"></div></div><div class="eye">'
+            + '<div class="ballE"></div></div></div>';
+            moveTheEyes();
+            let element = document.getElementById('rightText');
+            element.innerHTML = "<p class='m-5 '>This is an MIT project that we had to finalise. <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn btn-primary position-sticky' target='_blank'>Go to GITHUB </a></p>";
+           
+
+  }
+  function moveTheEyes() {
+    var ballsE = document.getElementsByClassName("ballE");
+    document.onmousemove = () => {
+      var x = (event.clientX * 100) / window.innerWidth + "%";
+      var y = (event.clientY * 100) / window.innerHeight + "%";
+
+      for (let i = 0; i < 2; i++) {
+        ballsE[i].style.left = x;
+        ballsE[i].style.top = y;
+        ballsE[i].transfoorm = "translate(-" + x + ",-" + y + ")";
+      }
+    };
   }
   
 
