@@ -27,8 +27,10 @@ function loadMainScreen()
 function setNavBar()
     {
         let navBar = document.getElementById("header");
-        navBar.className = "container rounded fixed-top text-uppercase";
-        let menuHTML = "<nav><ul class='nav nav-pills'>";
+        navBar.className = "container rounded fixed-top text-uppercase bg-dark";
+        let menuHTML = "<div class= 'position-relative w-100 text-sm-center text-center bg-dark  border-bottom rounded border-white'><h1 class='text-light'>Peter Hardy</h1>";
+        menuHTML += " <p class='text-light'>A developer's portfolio </p></div>";
+         menuHTML += "<nav><ul class='nav nav-pills justify-content-center bg-gradient-dark'>";
         for (i = 0; i < nav.length; i++)
         {
             let menuItem = nav[i];
@@ -36,8 +38,47 @@ function setNavBar()
                                     " class='nav-link text-uppercase text-light'>" + menuItem + "</button></li>";
                                     console.log(menuItem);
         }
-        menuHTML += "</ul></nav>";
-        menuHTML += "<div class= 'position-relative w-100 text-sm-center text-center bg-dark'><h1 class='text-right text-light'>Peter Hardy</h1></div";
+       
+        
+      /*  <!-- Twitter -->
+        <i class="fab fa-twitter"></i>
+        
+        <!-- Google -->
+        <i class="fab fa-google"></i>
+        
+        <!-- Instagram -->
+        <i class="fab fa-instagram"></i>
+        
+        <!-- Linkedin -->
+        <i class="fab fa-linkedin-in"></i>
+        
+        <!-- Pinterest -->
+        <i class="fab fa-pinterest"></i>
+        
+        <!-- Vkontakte -->
+        <i class="fab fa-vk"></i>
+        
+        <!-- Stack overflow -->
+        <i class="fab fa-stack-overflow"></i>
+        
+        <!-- Youtube -->
+        <i class="fab fa-youtube"></i>
+        
+        <!-- Slack -->
+        <i class="fab fa-slack-hash"></i>
+        
+        <!-- Github -->
+        <i class="fab fa-github"></i>
+        
+        <!-- Dribbble -->
+        <i class="fab fa-dribbble"></i>
+        
+        <!-- Reddit -->
+        <i class="fab fa-reddit-alien"></i>
+        
+        <!-- Whatsapp -->
+        <i class="fab fa-whatsapp"></i>*/
+        menuHTML += "</ul> <i class='fab fa-facebook-f'></i></nav>";
         console.log(nav[0]);
         navBar.innerHTML += menuHTML;
        setSelectedMenuItem(nav[0]);
@@ -98,7 +139,7 @@ function loadHome() {
     
     left.innerHTML = "";
    // left.innerHTML += "<h1 class='text-center m-5'>Peter Hardy</h1>";
-    left.innerHTML += "<p class='m-5 '>  A developer's portfolio</p>";
+    left.innerHTML += "<div id='rightText' class='bg-white'><p class='m-5 '>The homepage displays an introduction video.</p></div>";
 
     left.innerHTML += "<img id='portImage' onclick='flipImage()'  style= 'bottom: 0;  display:block;' width='100% height=100%' src=" + imgLoc + "></img>";
 
@@ -123,14 +164,16 @@ function loadAbout() {
     right.innerHTML = "";
     right.innerHTML += "<div><strong>Hi! </strong><p>My name is Peter Hardy, "
                     + calculateAge() + " years old. I live in Belgiume in a small village not far from brussels</div";
+    let element = document.getElementById('rightText');
+    element.innerHTML = "<p class='m-5 '>Find my short biography on this page.</p>";
 
 
 }
 function calculateAge(birthday) { // birthday is a date
-    var dob = new Date("06/16/1986");  
-    var month_diff = Date.now() - dob.getTime();  
-    var age_dt = new Date(month_diff);    
-    var year = age_dt.getUTCFullYear();  
+    var bd = new Date("06/16/1986");  
+    var monthDiff = Date.now() - bd.getTime();  
+    var ageDt = new Date(monthDiff);    
+    var year = ageDt.getUTCFullYear();  
     var age = Math.abs(year - 1970);  
     return age;
 
@@ -150,6 +193,8 @@ function loadProjects() {
             + "<a href="+ cards[i][2] + " target = '_blank' class='btn btn-primary stretched-link'>" + cards[i][3] + "</a></div> "
     }
     right.innerHTML += "</div>"
+    let element = document.getElementById('rightText');
+    element.innerHTML = "<p class='m-5 '>These are my projects, click on any of the bootstrap cards!</p>";
 
 
 
@@ -165,6 +210,8 @@ function loadContact() {
         + '<div class="row"> <div class="col-md-9 mb-md-0 mb-5">'
         + '<strong>E-mail: <a href="mailto: peter.hardy@ouiqui.com"> peter.hardy@ouiqui.com</a> for any enquiries. </strong>'
         +  '</div></div></section>' ;
+        let element = document.getElementById('rightText');
+    element.innerHTML = "<p class='m-5 '>Send me an e-mail if you want to find out more!</p>";
 
 
 }
