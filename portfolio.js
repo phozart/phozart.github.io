@@ -109,7 +109,7 @@ function loadHome() {
    // left.innerHTML += "<h1 class='text-center m-5'>Peter Hardy</h1>";
 
 
-    left.innerHTML += "<div id='rightText' class='bg-white'><p class='m-5 '>This box guides you through the portfolio site. This page displays an introduction video.</p></div>";
+    left.innerHTML += "<div id='rightText' class='bg-white' style='border-radius:50px;'><p class='m-5 '>This box guides you through the portfolio site. This page displays an introduction video.</p></div>";
 
     left.innerHTML += "<img id='portImage' onclick='flipImage()'  style= 'bottom: 0;  display:block;' width='100% height=100%' src=" + imgLoc + "></img>";
 
@@ -209,10 +209,10 @@ function loadContact() {
     right.innerHTML = "";
     //following contact form is copied from https://mdbootstrap.com/docs/b4/jquery/forms/contact/#html
     right.innerHTML += '<section class="mb-4">'
-        + '<h2 class="h2-responsive font-weight-bold text-left my-4">Contact me</h2>'
+        + '<h2 class="h2-responsive font-weight-bold text-left my-4">Contact</h2>'
         + '<div class="row"> <div class="col-md-9 mb-md-0 mb-5">'
-        + '<strong>E-mail: <a href="mailto: peter.hardy@ouiqui.com"> peter.hardy@ouiqui.com</a> for any enquiries. </strong>'
-        +  '</div></div></section>' ;
+        + '<strong>E-mail: <a href="mailto: peter.hardy@hazerco.be"> peter.hardy@hazerco.be</a> for any enquiries. </strong>'
+        +  '</div><div class="col-md-9 mb-md-0 mb-5">To find out more about my work experiences, please visit my Linked-In page.</div></div></section>' ;
         let element = document.getElementById('rightText');
     element.innerHTML = "<p class='m-5 '>Send me an e-mail if you want to find out more!</p>";
 
@@ -238,10 +238,10 @@ function busProject() {
     right.innerHTML = "";
     right.innerHTML = "<div class='justify-content-center'><h2>Bus stop exercise</h2><div><div class='row'>";
     right.innerHTML += "<div class='col-sm-8 positio-relative'>This project is showing the bus stops between MIT and Harvard. "
-    right.innerHTML += "<a href='https://github.com/phozart/BusStops' class='btn btn-primary position-relative' target='_blank'>Go to GITHUB </a></div>"    ;
+    right.innerHTML += "</div>"    ;
     right.innerHTML += "<div id='map' class = 'col-sm-4 justify-content-center position-relative'> </div></div>";
     let element = document.getElementById('rightText');
-    element.innerHTML = "<p class='m-5 '>You are looking at the bus project now, <a onclick='loadProjects()' class='btn btn-primary'>click here</a> to go back to the projects page</p>";
+    element.innerHTML = "<p class='m-5 '>You are looking at the bus project now, <a onclick='loadProjects()' class='btn btn-info'>click here</a> to go back to the projects page or <a href='https://github.com/phozart/BusStops' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
     mapboxgl.accessToken = 'pk.eyJ1IjoicGhvemFydCIsImEiOiJja3RsaGY1dGwxdm1yMnpxbnlsMXdzbHdvIn0.hZDbJK32w1AJsD9scMci5A';
     var map = new mapboxgl.Map({
       container: 'map',
@@ -290,7 +290,7 @@ function move() {
             + '<div class="ballE"></div></div></div>';
             moveTheEyes();
             let element = document.getElementById('rightText');
-            element.innerHTML = "<p class='m-5 '>This is an MIT project that we had to finalise. <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn btn-primary position-sticky' target='_blank'>Go to GITHUB </a></p>";
+            element.innerHTML = "<p class='m-5 '>This is an MIT project that we had to finalise. <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
            
 
   }
@@ -315,7 +315,7 @@ function move() {
     right.innerHTML += '<strong>OUCH.. looks like there is no data yet</strong>';
         
           let element = document.getElementById('rightText');
-          element.innerHTML = "<p class='m-5 '>Running Pacmen, catch him if you can <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn btn-primary position-sticky' target='_blank'>Go to GITHUB </a></p>";
+          element.innerHTML = "<p class='m-5 '>Running Pacmen, catch him if you can <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
          
   }
   
