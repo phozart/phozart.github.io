@@ -276,7 +276,7 @@ function move() {
   function showProject() {
     right.innerHTML = "";
     right.innerHTML = "<div class='justify-content-center'><h2>A page showing JS functions and exercises</h2><div><div class='row'>";
-    right.innerHTML += "<div id='head' class='col col-sm-8 position-relative'> </div><div id='output' class='position-sticky mt-1'></div><div id = 'comment' class='position-sticky'> </div></div>";
+    right.innerHTML += "<div id='head' class='col col-sm-8 position-relative' > </div><div id='output' class='position-sticky mt-1'></div><div id = 'comment' class='position-sticky'> </div></div>";
     let element = document.getElementById('rightText');
     element.innerHTML = "<p class='m-5 '>You are looking at a project that I made to show JS functions. <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page</p>";
     starter();
