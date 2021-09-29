@@ -16,7 +16,7 @@ const cards = [
     "showProject()",
     "Go to page",
   ],
-  ["Use of grids", "Displays a grid within the page", "loadGridProject()", "Show now!"]
+  ["Use of grids", "Displays a grid within the page", "loadGridProject(20)", "Show now!"]
 ];
 const socialMedia = [
   ["LinkedIn", "https://www.linkedin.com/in/peter-hardy-2512175/"],
@@ -258,7 +258,7 @@ function busProject() {
   right.innerHTML =
     "<div class='justify-content-center'><h2>Bus stop exercise</h2><div><div class='row'>";
   right.innerHTML +=
-    "<div class='col-sm-8 positio-relative'>This project is showing the bus stops between MIT and Harvard. ";
+    "<div class='col-sm-8 positio-relative'>This project is showing a map with a moving marker. Each marker that appears is a different bus stop between MIT and Harvard. Once it arrives at destination, it will turn around in the other direction. ";
   right.innerHTML += "</div>";
   right.innerHTML +=
     "<div id='map' class = 'col-sm-4 justify-content-center position-relative'> </div></div>";
@@ -298,7 +298,7 @@ function move() {
 function showProject() {
   right.innerHTML = "";
   right.innerHTML =
-    "<div class='justify-content-center'><h2>A page showing JS functions and exercises</h2><div><div class='row'>";
+    "<div class='justify-content-center'><h2>A page showing JS functions and exercises</h2><div><p>This page displays different buttons, each representing a different Javascript function. Try them all out!</p><div class='row'>";
   right.innerHTML +=
     "<div id='head' class='col col-sm-8 position-relative' > </div><div id='output' class='position-sticky mt-1'></div><div id = 'comment' class='position-sticky'> </div></div>";
   let element = document.getElementById("rightText");
@@ -310,7 +310,7 @@ function showProject() {
 function movingEyes() {
   right.innerHTML = "";
   right.innerHTML =
-    "<div class='justify-content-center'><h2>A page showing moving eyes! Move your cursor</h2><div>";
+    "<div class='justify-content-center'><h2>Moving eyes! </h2><p>Move your cursor around the eyes to make it move. the eye will follow the direction of the cursor.</p><div>";
 
   right.innerHTML +=
     '<div class="eyes"><div class="eye"><div class="ballE"></div></div><div class="eye">' +
@@ -346,19 +346,22 @@ function loadPacMen() {
     "<p class='m-5 '>Running Pacmen, catch him if you can <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
 }
 
-function loadGridProject() {
+function loadGridProject(gridsize) {
     right.innerHTML = ""
-    right.innerHTML = "<h1> Grid project</h1><p>This project displays the use of grids on a page</p><main class='grid-content' id='target'><div class='grid-div' </main>"
-    gridsize = 10;    
+    right.innerHTML = "<h1> Grid project</h1><p>This project displays the use of grids on a page. it dynamically creates the number of divs provided as an arguement when the function is called.</p><main class='grid-content' id='target'> </main>"
+     
     let pos = 1;
-        function createGrid() {
-            const main = document.getElementById('target');
-            for (let i = 1; i<=gridsize; i++){
-                var div = document.createElement('div');
-                div.id = 's' + i;
-                div.innerText = i;
-                div.className = "grid-div";
-                main.appendChild(div);
-            }
-        }
+        
+    const main = document.getElementById('target');
+    for (let i = 1; i<=gridsize; i++){
+        var div = document.createElement('div');
+        div.innerText = i;
+        div.className = "grid-div";
+        main.appendChild(div);
+    }
+    let element = document.getElementById("rightText");
+    element.innerHTML =
+      "<p class='m-5 '>This project is showing a grid of divs. <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
+  
+        
 }
