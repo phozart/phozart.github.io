@@ -40,26 +40,23 @@ function update() {
   pacMen.forEach((item) => {
     checkCollisions(item);
     item.position.x += item.velocity.x;
-    
-    
-    if(item.velocity.x > 0) images = pacArray[0]; 
-    if(item.velocity.x < 0) images = pacArray[1]; 
+
+    if (item.velocity.x > 0) images = pacArray[0];
+    if (item.velocity.x < 0) images = pacArray[1];
     item.position.y += item.velocity.y;
     let selected = "";
-    if (b===0){
-       selected = images[0];
-    
+    if (b === 0) {
+      selected = images[0];
     } else {
-        selected = images[1];
+      selected = images[1];
     }
-    item.newimg.src  = selected;
+    item.newimg.src = selected;
 
-    if (b===0) b=1;
-    else b=0;
+    if (b === 0) b = 1;
+    else b = 0;
 
     item.newimg.style.left = item.position.x;
     item.newimg.style.top = item.position.y;
-   
   });
   setTimeout(update, 60);
 }
@@ -75,7 +72,7 @@ function checkCollisions(item) {
       window.innerHeight ||
     item.position.y + item.velocity.y < 0
   )
-    item.velocity.y = -item.velocity.y;
+    item.velocity.y = -item.velocity.y; 
 }
 
 function makeOne() {

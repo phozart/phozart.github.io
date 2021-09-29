@@ -9,7 +9,7 @@ This APP shows capabilities to:
 - Move images on screen
 
 
-
+ 
 */
 var divOutput = "";
 var divHeader = "";

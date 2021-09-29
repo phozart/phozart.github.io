@@ -16,7 +16,12 @@ const cards = [
     "showProject()",
     "Go to page",
   ],
-  ["Use of grids", "Displays a grid within the page", "loadGridProject(20)", "Show now!"]
+  [
+    "Use of grids",
+    "Displays a grid within the page",
+    "loadGridProject(20)",
+    "Show now!",
+  ],
 ];
 const socialMedia = [
   ["LinkedIn", "https://www.linkedin.com/in/peter-hardy-2512175/"],
@@ -174,17 +179,17 @@ function flipImage() {
 function loadAbout() {
   right.innerHTML = "";
   right.innerHTML +=
-    "<div><strong>Hi! Welcome to my portfolio page.</strong> <p>I’m Peter Hardy, "+ calculateAge() + " years old and I’m from Belgium, married and have 2 kids. "
-    + "I built this portfolio as an assignment for the MIT x-pro Full stack developer course.</p>"
-    
-    +"<p>Throughout my career I’ve been working for several IT companies in logistics, support analysis, incident management as well as team management in Belgium and abroad.</p>"
-    +"<p>Since 2014 I’m a small business owner, providing consultancy services in IT management and business analysis. Beside these core business activities I’m a photographer, Dj and music producer. In my little free time I’m an amateur astronomer. "
-    +"And on top of these activities I’m continuously studying to gain new knowledge.</p>"
-    +"<p>Some of the key skills I've developed and used over the past years are SQL query writing, object oriented thinking, service management and agile project management to name just a few.</p>"
-    
-    +"<p>This is the key information about me, if you want to learn more, you can check my socials listed on this page, send me an e-mail or sent me a direct message on whatsapp.</p><p>Thank you for visiting this page!</p><p>P.S. If you watched the video, to find the answer to the final question, click my image.</p>" 
-    +"<p>Visit my <a href='https://github.com/phozart' target='_blank' >GITHUB (username: phozart)</a> to find out more about the projects. </p><p>visit my <a href='https://www.linkedin.com/in/peter-hardy-2512175' target='_blank' > Linked in page </a>to find more information about my work experiences</p></div> ";
-  
+    "<div><strong>Hi! Welcome to my portfolio page.</strong> <p>I’m Peter Hardy, " +
+    calculateAge() +
+    " years old and I’m from Belgium, married and have 2 kids. " +
+    "I built this portfolio as an assignment for the MIT x-pro Full stack developer course.</p>" +
+    "<p>Throughout my career I’ve been working for several IT companies in logistics, support analysis, incident management as well as team management in Belgium and abroad.</p>" +
+    "<p>Since 2014 I’m a small business owner, providing consultancy services in IT management and business analysis. Beside these core business activities I’m a photographer, Dj and music producer. In my little free time I’m an amateur astronomer. " +
+    "And on top of these activities I’m continuously studying to gain new knowledge.</p>" +
+    "<p>Some of the key skills I've developed and used over the past years are SQL query writing, object oriented thinking, service management and agile project management to name just a few.</p>" +
+    "<p>This is the key information about me, if you want to learn more, you can check my socials listed on this page, send me an e-mail or sent me a direct message on whatsapp.</p><p>Thank you for visiting this page!</p><p>P.S. If you watched the video, to find the answer to the final question, click my image.</p>" +
+    "<p>Visit my <a href='https://github.com/phozart' target='_blank' >GITHUB (username: phozart)</a> to find out more about the projects. </p><p>visit my <a href='https://www.linkedin.com/in/peter-hardy-2512175' target='_blank' > Linked in page </a>to find more information about my work experiences</p></div> ";
+
   let element = document.getElementById("rightText");
   element.innerHTML =
     "<p class='m-5 '>Find my short biography on this page.</p>";
@@ -316,7 +321,7 @@ function movingEyes() {
     '<div class="eyes"><div class="eye"><div class="ballE"></div></div><div class="eye">' +
     '<div class="ballE"></div></div></div>';
   moveTheEyes();
-  let element = document.getElementById("rightText");
+  let element = document.getElementById("rightText"); 
   element.innerHTML =
     "<p class='m-5 '>This is an MIT project that we had to finalise. <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
 }
@@ -339,30 +344,29 @@ function loadPacMen() {
   right.innerHTML =
     "<div class='justify-content-center'><h2>This project lets Pacman move!</h2>";
 
-  right.innerHTML += "<p>Press the buttons within the innerframe to create a new pacman. You can create multiple pacmen if you like. This project is using an iframe to not interfere with the portfolio content</p>"
-                  + "<iframe class='embed-responsive-item' style='height:300px;width=400px;' src='pac.html'></iframe><div>";
+  right.innerHTML +=
+    "<p>Press the buttons within the innerframe to create a new pacman. You can create multiple pacmen if you like. This project is using an iframe to not interfere with the portfolio content</p>" +
+    "<iframe class='embed-responsive-item' style='height:300px;width=400px;' src='pac.html'></iframe><div>";
   let element = document.getElementById("rightText");
   element.innerHTML =
     "<p class='m-5 '>Running Pacmen, catch him if you can <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
 }
 
 function loadGridProject(gridsize) {
-    right.innerHTML = ""
-    right.innerHTML = "<h1> Grid project</h1><p>This project displays the use of grids on a page. it dynamically creates the number of divs provided as an arguement when the function is called.</p><main class='grid-content' id='target'> </main>"
-     
-    let pos = 1;
-        
-    const main = document.getElementById('target');
-    for (let i = 1; i<=gridsize; i++){
-        var div = document.createElement('div');
-        div.innerText = i;
-        div.className = "grid-div";
-        main.appendChild(div);
-    }
-    let element = document.getElementById("rightText");
-    element.innerHTML =
-      "<p class='m-5 '>This project is showing a grid of divs. <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
-  
-        
-}
+  right.innerHTML = "";
+  right.innerHTML =
+    "<h1> Grid project</h1><p>This project displays the use of grids on a page. it dynamically creates the number of divs provided as an arguement when the function is called.</p><main class='grid-content' id='target'> </main>";
 
+  let pos = 1;
+
+  const main = document.getElementById("target");
+  for (let i = 1; i <= gridsize; i++) {
+    var div = document.createElement("div");
+    div.innerText = i;
+    div.className = "grid-div";
+    main.appendChild(div);
+  }
+  let element = document.getElementById("rightText");
+  element.innerHTML =
+    "<p class='m-5 '>This project is showing a grid of divs. <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
+}
