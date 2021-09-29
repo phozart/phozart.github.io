@@ -119,7 +119,8 @@ function loadHome() {
     "></img>";
 
   right.innerHTML = "";
-  right.innerHTML += '<div class="row justify-content-center d-flex"> <h1>Introduction page</h1></div><div class="row"><div class="d-flex justify-content-center"><iframe width="560" height="315" src="https://www.youtube.com/embed/ICS5iEYFaN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>';
+  right.innerHTML +=
+    '<div class="row justify-content-center d-flex"> <h1>Introduction page</h1></div><div class="row"><div class="d-flex justify-content-center"><iframe width="560" height="315" src="https://www.youtube.com/embed/ICS5iEYFaN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>';
   if (socialMedia.length > 0) {
     var socials =
       "<div class = 'container border rounded bg-light'><div class = 'row justify-content-center'>";
@@ -321,22 +322,25 @@ function movingEyes() {
     '<div class="eyes"><div class="eye"><div class="ballE"></div></div><div class="eye">' +
     '<div class="ballE"></div></div></div>';
   moveTheEyes();
-  let element = document.getElementById("rightText"); 
+  let element = document.getElementById("rightText");
   element.innerHTML =
     "<p class='m-5 '>This is an MIT project that we had to finalise. <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
 }
 function moveTheEyes() {
   var ballsE = document.getElementsByClassName("ballE");
+  
   document.onmousemove = () => {
     var x = (event.clientX * 100) / window.innerWidth + "%";
     var y = (event.clientY * 100) / window.innerHeight + "%";
-
+    
     for (let i = 0; i < 2; i++) {
       ballsE[i].style.left = x;
       ballsE[i].style.top = y;
       ballsE[i].transfoorm = "translate(-" + x + ",-" + y + ")";
-    }
+      }
+    
   };
+  
 }
 
 function loadPacMen() {

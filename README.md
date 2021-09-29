@@ -33,3 +33,5 @@
 # Many of the variables like the menu, the project cards or the socials are defined within Arrays in the top section of portfolio.js and called where required. 
 
 # Possible improvements: update content text, add when new projects come in
+
+# To do: remove error on mouse move when moving away from the page
