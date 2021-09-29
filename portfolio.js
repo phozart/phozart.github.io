@@ -119,7 +119,7 @@ function loadHome() {
     "></img>";
 
   right.innerHTML = "";
-  right.innerHTML += "<div><strong>youtube video comes here</strong></div";
+  right.innerHTML += '<div class="row justify-content-center d-flex"> <h1>Introduction page</h1></div><div class="row"><div class="d-flex justify-content-center"><iframe width="560" height="315" src="https://www.youtube.com/embed/ICS5iEYFaN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>';
   if (socialMedia.length > 0) {
     var socials =
       "<div class = 'container border rounded bg-light'><div class = 'row justify-content-center'>";
@@ -349,7 +349,7 @@ function loadPacMen() {
     "<iframe class='embed-responsive-item' style='height:300px;width=400px;' src='pac.html'></iframe><div>";
   let element = document.getElementById("rightText");
   element.innerHTML =
-    "<p class='m-5 '>Running Pacmen, catch him if you can <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
+    "<p class='m-5 '>Running Pacmen, catch him if you can <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/pacmen-exercise' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
 }
 
 function loadGridProject(gridsize) {
@@ -368,5 +368,5 @@ function loadGridProject(gridsize) {
   }
   let element = document.getElementById("rightText");
   element.innerHTML =
-    "<p class='m-5 '>This project is showing a grid of divs. <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
+    "<p class='m-5 '>This project is showing a grid of divs. <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/gridexercise' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
 }

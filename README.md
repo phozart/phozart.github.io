@@ -30,4 +30,6 @@
 
 # Some of the projects have MIT licenses and coding from these exercises was copied into the application.
 
+# Many of the variables like the menu, the project cards or the socials are defined within Arrays in the top section of portfolio.js and called where required. 
+
 # Possible improvements: update content text, add when new projects come in
