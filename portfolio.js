@@ -337,10 +337,10 @@ function moveTheEyes() {
 function loadPacMen() {
   right.innerHTML = "";
   right.innerHTML =
-    "<div class='justify-content-center'><h2>This project lets Pacman move!</h2><div>";
+    "<div class='justify-content-center'><h2>This project lets Pacman move!</h2>";
 
-  right.innerHTML += "<strong>OUCH.. looks like there is no data yet</strong>";
-
+  right.innerHTML += "<p>Press the buttons within the innerframe to create a new pacman. You can create multiple pacmen if you like. This project is using an iframe to not interfere with the portfolio content</p>"
+                  + "<iframe class='embed-responsive-item' style='height:300px;width=400px;' src='pac.html'></iframe><div>";
   let element = document.getElementById("rightText");
   element.innerHTML =
     "<p class='m-5 '>Running Pacmen, catch him if you can <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
@@ -365,3 +365,4 @@ function loadGridProject(gridsize) {
   
         
 }
+
