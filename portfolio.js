@@ -16,6 +16,7 @@ const cards = [
     "showProject()",
     "Go to page",
   ],
+  ["Use of grids", "Displays a grid within the page", "loadGridProject()", "Show now!"]
 ];
 const socialMedia = [
   ["LinkedIn", "https://www.linkedin.com/in/peter-hardy-2512175/"],
@@ -36,12 +37,12 @@ function loadMainScreen() {
 
 function setNavBar() {
   let navBar = document.getElementById("header");
-  navBar.className = "container rounded fixed-top text-uppercase bg-dark";
+  navBar.className = "container rounded fixed-top text-uppercase bg-dark ";
   let menuHTML =
     "<div class= 'position-relative w-100 text-sm-center text-center bg-dark  border-bottom rounded border-white'><h1 class='text-light'>Peter Hardy</h1>";
   menuHTML += " <p class='text-light'>A developer's portfolio </p></div>";
   menuHTML +=
-    "<nav><ul class='nav nav-pills justify-content-center bg-gradient-dark'>";
+    "<nav><ul class='nav nav-pills justify-content-center  bg-gradient-dark'>";
   for (i = 0; i < nav.length; i++) {
     let menuItem = nav[i];
     menuHTML +=
@@ -181,8 +182,8 @@ function loadAbout() {
     +"And on top of these activities I’m continuously studying to gain new knowledge.</p>"
     +"<p>Some of the key skills I've developed and used over the past years are SQL query writing, object oriented thinking, service management and agile project management to name just a few.</p>"
     
-    +"<p>This is the key information about me, if you want to learn more, you can check my socials listed on this page, send me an e-mail or sent me a direct message on whatsapp.</p><p>Thank you for visiting this page!</p><p>P.S. If you watched the video, to find the answer to the final question, click my image.</p></div> " ;
-    
+    +"<p>This is the key information about me, if you want to learn more, you can check my socials listed on this page, send me an e-mail or sent me a direct message on whatsapp.</p><p>Thank you for visiting this page!</p><p>P.S. If you watched the video, to find the answer to the final question, click my image.</p>" 
+    +"<p>Visit my <a href='https://github.com/phozart' target='_blank' >GITHUB (username: phozart)</a> to find out more about the projects. </p><p>visit my <a href='https://www.linkedin.com/in/peter-hardy-2512175' target='_blank' > Linked in page </a>to find more information about my work experiences</p></div> ";
   
   let element = document.getElementById("rightText");
   element.innerHTML =
@@ -343,4 +344,21 @@ function loadPacMen() {
   let element = document.getElementById("rightText");
   element.innerHTML =
     "<p class='m-5 '>Running Pacmen, catch him if you can <a onclick='loadProjects()' class='btn btn-info'>Click here</a> to go back to the projects page or <a href='https://github.com/phozart/movingEyes' class='btn position-sticky bg-success' target='_blank'>Go to GITHUB </a></p>";
+}
+
+function loadGridProject() {
+    right.innerHTML = ""
+    right.innerHTML = "<h1> Grid project</h1><p>This project displays the use of grids on a page</p><main class='grid-content' id='target'><div class='grid-div' </main>"
+    gridsize = 10;    
+    let pos = 1;
+        function createGrid() {
+            const main = document.getElementById('target');
+            for (let i = 1; i<=gridsize; i++){
+                var div = document.createElement('div');
+                div.id = 's' + i;
+                div.innerText = i;
+                div.className = "grid-div";
+                main.appendChild(div);
+            }
+        }
 }

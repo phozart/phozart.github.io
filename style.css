@@ -92,3 +92,45 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
+
+a:visited {
+  color: rgb(22, 73, 90);
+}
+
+a:hover {
+  color: hotpink;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+a:link {
+  color: darkblue;
+  text-decoration: none;
+}
+
+li:hover{
+  background-color: rgb(117, 23, 23);
+  font-size: 18px; 
+}
+
+#right-column {
+  background-color: rgb(228, 227, 225);
+}
+
+#left-column {
+  background-color: rgb(216, 215, 213);
+}
+
+.grid-content{
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: repeat(10,1fr);
+  gap: 5px;
+}
+
+.grid-div{
+  padding: 10px;
+  text-align: center;
+  border-style: solid;
+  font-size: 1em;
+}
